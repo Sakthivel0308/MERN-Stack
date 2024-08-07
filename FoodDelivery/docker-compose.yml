@@ -1,0 +1,53 @@
+version: "3.8"
+
+# networks:
+#   app-network:
+#     driver: bridge
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+    # networks:
+    #   - app-network
+    
+  admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+    # networks:
+    #   - app-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "4000:4000"
+    depends_on:
+      - database
+    # networks:
+    #   - app-network
+
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-backup:/data/db
+    # networks:
+    #   - app-network

@@ -1,0 +1,79 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f9; /* Light grey background */
+}
+
+h1 {
+  text-align: center;
+  color: #6a0dad; /* Purple header text */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #6a0dad; /* Purple label text */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #6a0dad; /* Purple border */
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  font-weight: 700;
+}
+
+form div button {
+  padding: 12px 20px;
+  color: #fff;
+  background-color: purple; /* Purple background */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4b087e; /* Darker purple on hover */
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #6a0dad; /* Purple link text */
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #4b087e; /* Darker purple on hover */
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

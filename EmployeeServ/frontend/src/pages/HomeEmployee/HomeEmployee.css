@@ -1,0 +1,86 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f9; /* Light grey background */
+}
+
+h1 {
+  text-align: center;
+  color: #6a0dad; /* Purple header text */
+}
+
+.add-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #6a0dad; /* Purple background */
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.add-link:hover {
+  background-color: #4b087e; /* Darker purple on hover */
+}
+
+h2 {
+  color: #6a0dad; /* Purple header text */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  color: black;
+  font-weight: 500;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+button {
+  padding: 5px 10px;
+  color: #fff;
+  background-color: green; /* Purple background */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4b087e; /* Darker purple on hover */
+}
+
+.edit-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+.edit-link:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+}
